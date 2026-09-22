@@ -3,20 +3,9 @@ using UnityEngine;
 public class DivisibleBy3 : MonoBehaviour
 {
    
-  [SerializeFeild] int num = 15;
+  [SerializeField] private int num = 15;
   public bool divisible = false;
-  public int divisor = 3;
-
-//   divisible = CanDivide(_num, divisor, divisible);
-
-//   Debug.Log(divisible);
-
-//   public bool CanDivide (int _num, int divisor, bool divisible)  
-//   {
-  
-
-//     Return 
-//   }
+  [SerializeField] private int divisor = 3;
 
 
 void Start()
