@@ -8,17 +8,17 @@ public class DivisibleBy3 : MonoBehaviour
   [SerializeField] private int divisor = 3;
 
 
-void Start()
-{
-    divisible = CanDivide(num, divisor);
+    void Start()
+    {
+        divisible = CanDivide(num, divisor);
 
-    Debug.Log(num + " is " + divisible);
-}
+        Debug.Log(num + " is " + divisible);
+    }
 
-public bool CanDivide(int num, int divisor)
-{
-    return num % divisor == 0;
-}
+    public bool CanDivide(int num, int divisor)
+    {
+        return num % divisor == 0;
+    }
 
 
 

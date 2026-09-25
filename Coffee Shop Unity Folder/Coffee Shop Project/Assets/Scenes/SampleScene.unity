@@ -1457,12 +1457,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1845376168}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4383a52c73c9c14ca68266c18d98add, type: 3}
+  m_Script: {fileID: 11500000, guid: 7177e4fed3abc70448c4820045e729ce, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DivisibleBy3
-  num: 20
-  divisible: 0
-  divisor: 5
+  m_EditorClassIdentifier: Assembly-CSharp::TillVatHandler
+  price: 652.36
+  totalPrice: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
