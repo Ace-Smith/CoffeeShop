@@ -11,6 +11,8 @@ public class CalculatingValues : MonoBehaviour
         _n = 4;
         //Calls method with _n as a parameter
         CalculateForN(_n);
+
+        Debug.LogError("No PlayerController found in parent!");
     }
 
     //method 
