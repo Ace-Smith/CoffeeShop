@@ -2,15 +2,16 @@ using UnityEngine;
 
 public class RandomNameGenerator : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+   string[] names = { "Ben", "Maisie", "Rose", "Charlie", "Emily", "Elle"};
+    private int index;
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        { 
+            int index = Random.Range(0, names.Length);
+            Debug.Log(names[index]);
+            
+        }
+
     }
 }
