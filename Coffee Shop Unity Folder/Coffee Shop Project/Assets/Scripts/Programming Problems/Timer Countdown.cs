@@ -12,7 +12,7 @@ public class TimerCountdown : MonoBehaviour
     {
         Debug.Log(counter);
         counter = counter - 1;
-        if (counter == 0)
+        if (counter < 0)
             {
                 CancelInvoke();
                 Debug.Log("Times up!");
