@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class CustomerScript : MonoBehaviour
 {
-    public static string order = "0";
-    public static string[] menu = {"Latte", "Espresso", "Tea", "Donut"};
+    [SerializeField] public string order = "0";
+    public string[] menu = {"Latte", "Espresso", "Tea", "Donut"};
     private int orderNum;
     void OnMouseDown()
     {
@@ -21,6 +21,7 @@ public class CustomerScript : MonoBehaviour
                 CheckCustomer.customersServed++;
                 Debug.Log("You have served " + CheckCustomer.customersServed + " customers");
                 order = "0";
+                PrepStation.drink = "0";
             }
             else
             {
