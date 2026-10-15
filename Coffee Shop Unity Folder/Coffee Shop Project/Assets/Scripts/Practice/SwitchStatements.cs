@@ -15,24 +15,24 @@ public class SwitchStatements : MonoBehaviour
         None
     }
 
-    [SerializeField] private CoffeeType coffeeOrder;
+//    [SerializeField] private CoffeeType coffeeOrder;
 
-    // void Start()
-    // {
-    //     switch(coffeeOrder)
-    //     {
-    //         case "Espresso":
-    //             Debug.Log("Making an Espresso.");
-    //             break;
-    //         case "Latte":
-    //             Debug.Log("Making a Latte");
-    //             break;
-    //         case "Cappuccino":
-    //             Debug.Log("Making a Cappuccino");
-    //             break;
-    //         default:
-    //             Debug.Log("Sorry, we don't have that drink on the menu.");
-    //             break;
-    //     }
-    // }
+//     void Start()
+//     {
+//         switch(coffeeOrder)
+//         {
+//             case "Espresso":
+//                 Debug.Log("Making an Espresso.");
+//                 break;
+//             case "Latte":
+//                 Debug.Log("Making a Latte");
+//                 break;
+//             case "Cappuccino":
+//                 Debug.Log("Making a Cappuccino");
+//                 break;
+//             default:
+//                 Debug.Log("Sorry, we don't have that drink on the menu.");
+//                 break;
+//         }
+//     }
 }

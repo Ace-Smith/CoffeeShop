@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89af3774aff3d1949989a68024675bc9, type: 3}
+  m_Name: Pumpkinspice Latte
+  m_EditorClassIdentifier: Assembly-CSharp::MenuItem
+  CoffeeIngredients:
+  - {fileID: 11400000, guid: ed05c9cb957de0844b82315529785872, type: 2}
+  - {fileID: 11400000, guid: 70621e48dc905144a9acae93c6d0525c, type: 2}
+  - {fileID: 11400000, guid: b47540b1faa2add48b48a7f23732b063, type: 2}
+  - {fileID: 11400000, guid: e5f667ba081e49e4687b33e89400e404, type: 2}
