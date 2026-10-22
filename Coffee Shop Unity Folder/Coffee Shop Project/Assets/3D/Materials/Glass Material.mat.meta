@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Coffee Shop Unity Folder/Coffee Shop Project/Assets/3D/Materials/Glass Material.mat.meta
 guid: e7fb0939dc1d3c645bd28dd700fe71f2
 NativeFormatImporter:
+========
+guid: e188465c8756bec4598c95fa0f96ce14
+folderAsset: yes
+DefaultImporter:
+>>>>>>>> fe4c28fa4a20a974ec9d62f9f37a85d9c39f275e:Coffee Shop Unity Folder/Coffee Shop Project/Assets/Scripts/CoffeeShop/UI.meta
   externalObjects: {}
   mainObjectFileID: 2100000
   userData: 
