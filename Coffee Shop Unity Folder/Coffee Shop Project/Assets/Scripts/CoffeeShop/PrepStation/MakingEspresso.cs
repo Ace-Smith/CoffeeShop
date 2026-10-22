@@ -3,26 +3,33 @@ using System.Collections;
 
 public class MakingEspresso : MonoBehaviour
 {
-    private int countdown = 10;
+    private int countdown = 3;
     void OnMouseDown()
     {
         if (PrepStation.stationBusy == false)
         {
-            PrepStation.stationBusy = true;
-            countdown = 10;
-            UIText.prepStationText = "Prep station making Espresso";
-            StartCoroutine(MakingItem());
+            if (PrepStation.drink != "0")
+            {
+                UIText.prepStationText = "Can only have one item at a time";
+            }
+            else
+            {
+                PrepStation.stationBusy = true;
+                countdown = 10;
+                UIText.prepStationText = "Prep station making Espresso";
+                StartCoroutine(MakingItem());
+            }
         }
         else if (PrepStation.stationBusy == true)
         {
-            UIText.prepStationText = UIText.prepStationText + ". Prep station is currently busy. Try again later";
+            UIText.prepStationBusyBool = true;
         }
     }
     private IEnumerator MakingItem()
     {
         yield return new WaitForSeconds(countdown);
-        UIText.prepStationText = "Espresso is ready!";
         PrepStation.stationBusy = false;
+        UIText.prepStationBusyBool = false;
         PrepStation.drink = "Espresso";
         UIText.prepStationText = "Click on the customer to give them the item!";
     }

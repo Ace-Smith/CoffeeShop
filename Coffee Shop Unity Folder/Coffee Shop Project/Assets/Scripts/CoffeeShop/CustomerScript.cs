@@ -21,6 +21,7 @@ public class CustomerScript : MonoBehaviour
                 CheckCustomer.customersServed++;
                 order = "0";
                 PrepStation.drink = "0";
+                UIText.prepStationText = " ";
             }
             else if (PrepStation.drink == "0")
             {
@@ -29,6 +30,8 @@ public class CustomerScript : MonoBehaviour
             else
             {
                 UIText.generalText = "Order incorrect. Try again";
+                PrepStation.drink = "0";
+                UIText.prepStationText = " ";
             }
         }
     }

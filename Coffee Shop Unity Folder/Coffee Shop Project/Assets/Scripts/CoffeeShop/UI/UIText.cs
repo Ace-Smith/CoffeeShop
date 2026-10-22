@@ -9,17 +9,16 @@ public class UIText : MonoBehaviour
     public TMP_Text orderText;
     public static string generalText = " ";
     public TMP_Text visibleGeneralText;
-    public TMP_Text controls;
     public TMP_Text visiblePrepStationText;
     public static string prepStationText = " ";
     public TMP_Text currentItem;
+    public static bool prepStationBusyBool;
+    public TMP_Text prepStationBusy;
+    public TMP_Text ShiftComplete;
+
     
 
-    void Start()
-    {
-        controls.text = "Click on customer to get their order and deliver items. Click on items to make them.";
-        currentItem.text = " ";
-    }
+    
     void Update()
     {
         progressText.text = "Progress " + CheckCustomer.customersServed + "/3";
@@ -47,12 +46,31 @@ public class UIText : MonoBehaviour
         
         if (PrepStation.drink != "0")
         {
-            currentItem.text = "Current item: " + PrepStation.drink;
+            currentItem.text = "Item in hand: " + PrepStation.drink;
         }
         else
         {
-            currentItem.text = " ";
+            currentItem.text = "Item in hand: --";
         }
+
+        if (prepStationBusyBool == true)
+        {
+            prepStationBusy.text = "Prep station is currently busy. Try again later";
+        }
+        else
+        {
+            prepStationBusy.text = " ";
+        }
+
+        if (CheckCustomer.customersServed == 3)
+        {
+            ShiftComplete.text = "Shift Complete!";
+        }
+        else
+        {
+            ShiftComplete.text = " ";
+        }
+
     }
     private IEnumerator generalTextCountdown()
     {
