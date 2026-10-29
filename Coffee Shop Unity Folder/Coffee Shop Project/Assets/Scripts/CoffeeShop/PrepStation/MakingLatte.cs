@@ -4,6 +4,8 @@ using System.Collections;
 public class MakingLatte : MonoBehaviour
 {
     private int countdown = 6;
+    public GameObject LatteCup;
+    public GameObject LatteCupMachine;
     void OnMouseDown()
     {
         
@@ -15,9 +17,11 @@ public class MakingLatte : MonoBehaviour
                 }
                 else
                 {
+                    countdown = 6;
                     PrepStation.stationBusy = true;
-                    countdown = 10;
                     UIText.prepStationText = "Prep station making Latte";
+                    LatteCup.SetActive(false);
+                    LatteCupMachine.SetActive(true);
                     StartCoroutine(MakingItem());
                 }
             }
@@ -29,10 +33,11 @@ public class MakingLatte : MonoBehaviour
     }
     private IEnumerator MakingItem()
     {
-        yield return new WaitForSeconds(countdown);
+        yield return new WaitForSeconds(6);
         PrepStation.stationBusy = false;
         UIText.prepStationBusyBool = false;
         PrepStation.drink = "Latte";
         UIText.prepStationText = "Click on the customer to give them the item!";
+        LatteCupMachine.SetActive(false);
     }
 }

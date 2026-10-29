@@ -3,7 +3,8 @@ using System.Collections;
 
 public class MakingDonut : MonoBehaviour
 {
-    private int countdown = 1;
+    private int countdown = 2;
+    public GameObject donut;
     void OnMouseDown()
     {
         if (PrepStation.stationBusy == false)
@@ -14,9 +15,9 @@ public class MakingDonut : MonoBehaviour
             }
             else
             {
+                countdown = 2;
                 PrepStation.stationBusy = true;
-                countdown = 10;
-                UIText.prepStationText = "Prep station making Donut";
+                UIText.prepStationText = "Collecting Donut";
                 StartCoroutine(MakingItem());
             }
         }
@@ -27,10 +28,11 @@ public class MakingDonut : MonoBehaviour
     }
     private IEnumerator MakingItem()
     {
-        yield return new WaitForSeconds(countdown);
+        yield return new WaitForSeconds(2);
         PrepStation.stationBusy = false;
         UIText.prepStationBusyBool = false;
         PrepStation.drink = "Donut";
+        donut.SetActive(false);
         UIText.prepStationText = "Click on the customer to give them the item!";
     }
 }

@@ -6,6 +6,12 @@ public class CustomerScript : MonoBehaviour
     [SerializeField] public static string order = "0";
     public string[] menu = {"Latte", "Espresso", "Tea", "Donut"};
     private int orderNum;
+    public GameObject customer;
+    public GameObject LatteCup;
+    public GameObject EspressoCup;
+    public GameObject TeaMug;
+    public GameObject DonutOne;
+    public GameObject DonutTwo;
     void OnMouseDown()
     {
         if (order == "0")
@@ -22,6 +28,8 @@ public class CustomerScript : MonoBehaviour
                 order = "0";
                 PrepStation.drink = "0";
                 UIText.prepStationText = " ";
+                customer.SetActive(false);
+                ResetItems();
             }
             else if (PrepStation.drink == "0")
             {
@@ -32,6 +40,7 @@ public class CustomerScript : MonoBehaviour
                 UIText.generalText = "Order incorrect. Try again";
                 PrepStation.drink = "0";
                 UIText.prepStationText = " ";
+                ResetItems();
             }
         }
     }
@@ -40,5 +49,14 @@ public class CustomerScript : MonoBehaviour
     {
         int orderNum = Random.Range(0, 4);
         return menu[orderNum];
+    }
+
+    public void ResetItems()
+    {
+        LatteCup.SetActive(true);
+        EspressoCup.SetActive(true);
+        TeaMug.SetActive(true);
+        DonutOne.SetActive(true);
+        DonutTwo.SetActive(true);
     }
 }
