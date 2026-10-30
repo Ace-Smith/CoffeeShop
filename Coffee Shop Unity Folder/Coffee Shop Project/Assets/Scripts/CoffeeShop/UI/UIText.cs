@@ -11,10 +11,10 @@ public class UIText : MonoBehaviour
     public TMP_Text visibleGeneralText;
     public TMP_Text visiblePrepStationText;
     public static string prepStationText = " ";
-    public TMP_Text currentItem;
     public static bool prepStationBusyBool;
     public TMP_Text prepStationBusy;
     public TMP_Text ShiftComplete;
+    public GameObject RestartButton;
 
     
 
@@ -43,15 +43,6 @@ public class UIText : MonoBehaviour
 
         visiblePrepStationText.text = prepStationText;
 
-        
-        if (PrepStation.drink != "0")
-        {
-            currentItem.text = "Item in hand: " + PrepStation.drink;
-        }
-        else
-        {
-            currentItem.text = "Item in hand: --";
-        }
 
         if (prepStationBusyBool == true)
         {
@@ -65,6 +56,7 @@ public class UIText : MonoBehaviour
         if (CheckCustomer.customersServed == 3)
         {
             ShiftComplete.text = "Shift Complete!";
+            RestartButton.SetActive(true);
         }
         else
         {

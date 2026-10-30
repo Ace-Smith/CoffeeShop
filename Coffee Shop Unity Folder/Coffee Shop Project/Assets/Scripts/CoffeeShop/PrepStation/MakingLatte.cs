@@ -3,7 +3,6 @@ using System.Collections;
 
 public class MakingLatte : MonoBehaviour
 {
-    private int countdown = 6;
     public GameObject LatteCup;
     public GameObject LatteCupMachine;
     void OnMouseDown()
@@ -17,7 +16,7 @@ public class MakingLatte : MonoBehaviour
                 }
                 else
                 {
-                    countdown = 6;
+                    
                     PrepStation.stationBusy = true;
                     UIText.prepStationText = "Prep station making Latte";
                     LatteCup.SetActive(false);

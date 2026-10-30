@@ -8,10 +8,13 @@ public class CheckCustomer : MonoBehaviour
 
     private void Update()
     {
-        if (!customer.activeInHierarchy)
+        if (customersServed != 3)
         {
-            StartCoroutine(SpawnCustomer());
-            
+            if (!customer.activeInHierarchy)
+            {
+                StartCoroutine(SpawnCustomer());
+
+            }
         }
     }
 
@@ -21,14 +24,6 @@ public class CheckCustomer : MonoBehaviour
         customer.SetActive(true);
         
     }
-    //public static Instantiate(Object TEMP_customer);
-
-    //void Update()
-    //{
-    //    if (customersServed == 3)
-    //    {
-    //        Debug.Log("Shift Complete");
-    //        customersServed++;
-    //    }
-    //}
+    
+ 
 }
