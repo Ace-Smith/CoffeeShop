@@ -14,7 +14,10 @@ public class UIText : MonoBehaviour
     public static bool prepStationBusyBool;
     public TMP_Text prepStationBusy;
     public TMP_Text ShiftComplete;
-    public GameObject RestartButton;
+    public TMP_Text CustomerAppearingText;
+    public static string CustomerAppearing = " ";
+    private bool checker = false;
+   
 
     
 
@@ -35,8 +38,9 @@ public class UIText : MonoBehaviour
         visibleGeneralText.text = generalText;
 
 
-        if (visibleGeneralText.text != " ")
+        if (visibleGeneralText.text != " " && checker == false)
         {
+            checker = true;
             StartCoroutine(generalTextCountdown()); 
         }
 
@@ -56,18 +60,21 @@ public class UIText : MonoBehaviour
         if (CheckCustomer.customersServed == 3)
         {
             ShiftComplete.text = "Shift Complete!";
-            RestartButton.SetActive(true);
+            
         }
         else
         {
             ShiftComplete.text = " ";
         }
 
+        CustomerAppearingText.text = CustomerAppearing;
+
     }
     private IEnumerator generalTextCountdown()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(4);
         generalText = " ";
+        checker = false;
     }
     
 }
